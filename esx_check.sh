@@ -1,11 +1,11 @@
-#!/bin/bash     
+#!/usr/bin/env bash
 #title          :esx_check.sh
 #description    :Checks the version of ESX that the guest is running on.
 #author         :cjohnson
-#date           :20140911
-#version        :0.2    
+#date           :20160513
+#version        :0.2
 #usage          :./esx_check.sh
-#notes          :N/A    
+#notes          :N/A
 #bash_version   :4.2.42(1)-release
 #============================================================================
 
@@ -13,16 +13,17 @@
 #Vars
 #---------------------------------------------------
 
+#Edit these vars as needed
+
 TIMESTAMP=$(date +%F-%H:%M)
 USER=$(whoami)
 LOG="script.log"
 ESXTYPE="$(dmidecode | grep -A4 "BIOS Information" | grep Address: | awk '{print $2 }')"
 
-
-
 #---------------------------------------------------
 #Functions
 #---------------------------------------------------
+
 esx_type()
 {
 	case "$ESXTYPE" in
@@ -51,4 +52,3 @@ esx_type
 #---------------------------------------------------
 #Footer
 #---------------------------------------------------
-

@@ -1,10 +1,36 @@
-#! /bin/bash
-# Simple VirtualBox script
+#!/usr/bin/env bash
+#title          :Vbox.sh
+#description    :Start a VirtualBox VM headless
+#author         :cjohnson
+#date           :20160513
+#version        :0.1
+#usage          :./Vbox.sh
+#notes          :N/A
+#bash_version   :4.2.42(1)-release
+#============================================================================
 
-#Edit these vars
+
+#---------------------------------------------------
+#Vars
+#---------------------------------------------------
+
+#Edit these vars as needed
+
+TIMESTAMP=$(date +%F-%H:%M)
+USER=$(whoami)
+LOG="script.log"
+
 VMUSER=admin
 VMNAME="Win8" # Change as needed
 BASEFOLDER=/Users/admin/ # Change as needed
+
+#---------------------------------------------------
+#Functions
+#---------------------------------------------------
+
+#---------------------------------------------------
+#Main Processing
+#---------------------------------------------------
 
 case "$1" in
     start)
@@ -51,3 +77,7 @@ case "$1" in
 esac
 
 exit 0
+
+#---------------------------------------------------
+#Footer
+#---------------------------------------------------

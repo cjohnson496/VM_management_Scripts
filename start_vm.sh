@@ -1,11 +1,11 @@
-#!/bin/bash     
+#!/usr/bin/env bash
 #title          :start_vm.sh
 #description    :Start a VirtualBox VM headless
 #author         :cjohnson
-#date           :20140827
-#version        :0.1    
+#date           :20160513
+#version        :0.1
 #usage          :./start_vm.sh
-#notes          :N/A    
+#notes          :N/A
 #bash_version   :4.2.42(1)-release
 #============================================================================
 
@@ -14,6 +14,7 @@
 #Vars
 #---------------------------------------------------
 
+#Edit these vars as needed
 TIMESTAMP=$(date +%F-%H:%M)
 USER=$(whoami)
 LOG="script.log"
@@ -27,14 +28,14 @@ LOG="script.log"
 #---------------------------------------------------
 
 clear screen
- 
+
 if test -z "$1"
 then
 echo "This script will start a VBox image"
 echo "Would you like to continue? "
 echo "Enter yes or no"
-read DOWHAT
-if [[ $DOWHAT = no ]]; then
+read TXT
+if [[ $TXT = no ]]; then
     exit 1
 fi
 echo "#########################################################"
@@ -56,4 +57,3 @@ vboxmanage list  runningvms
 #---------------------------------------------------
 #Footer
 #---------------------------------------------------
-
