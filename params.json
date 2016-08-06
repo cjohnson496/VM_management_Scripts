@@ -1,0 +1,6 @@
+{
+  "name": "Vm management scripts",
+  "tagline": "VB and VMware shell scripts to be run on Linux Virtual Guests. ",
+  "body": "# VM_management_Scripts\r\nA few simple scripts kept around to Start/Stop VirtualBox VMs.  Also\r\nincluded are some VMware specific scripts to get/set VM Host info  and\r\nto return the ESX version of the host.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
